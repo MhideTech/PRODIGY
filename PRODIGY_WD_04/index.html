@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODIGY_WD_04 : Personal Portfolio Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/a0b5b0f1de.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="hero-wrap bg-img cont-d-flex">
+        <nav class="nav">
+            <div class="logo-toggle d-flex">
+                <div class="logo">ORLAAAH.</div>
+                <div class="toggle-btn">
+                    <i class="fa-solid fa-bars toggler"></i>
+                </div>
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <span class="hi-there">Hi There</span>
+            <h1>I'm Olamide</h1>
+            <span class="sub-heading">A Frontend Web Developer</span>
+            <div style="margin-left: auto;">
+                <p style="width: 60%; margin-left: auto;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi rem aperiam dicta, id corrupti voluptatem voluptates quis. Fugiat, id!</p>
+                <a class="btn btn-primary" href="#contact">Hire Me</a>
+                <a class="btn btn-secondary" href="./document/Okefolahan Olamide Resume.pdf" download style="margin-left: 10px;"><i class="fa-solid fa-download"></i> Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about d-flex" id="about">
+        <div class="about-image">
+            <img src="./images/about.avif" alt="">
+        </div>
+        <div class="about-text">
+            <div class="operations">
+                <div class="tab-container">
+                    <button class="tab tab-btn tab-btn--1 tab-btn--active" data-tab="1">About Me</button>
+                    <button class="tab tab-btn tab-btn--2" data-tab="2">Skills</button>
+                    <button class="tab tab-btn tab-btn--3" data-tab="3">Experience</button>
+                </div>
+
+                <div class="tab-content tab-content--1 tab-content--active">
+                    <h1 class="sub-heading">I am Okefolahan Olamide Israel</h1>
+                    <ul>
+                        <li>A software developer from Nigeria. I enjoy creating things that live on the internet, whether that be websites, applications or anything between.</li>
+                        <li>My goal is to always build products that help solve tasks that can be automated and make life easier. I derive great joy in creating solutions to put smile on the faces of client.</li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</li>
+                        <li><i class="fa-solid fa-phone"></i> (+234)80-3984-4376</li>
+                        <li><i class="fa-solid fa-envelope"></i> example@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="tab-content tab-content--2">
+                    <h1 class="sub-heading">My Skills</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, qui aspernatur modi nobis, eos necessitatibus perspiciatis molestiae maiores a accusantium, vitae quo.</p>
+
+                    <div class="d-flex">
+                        <div class="skill">
+                            <img src="./images/skills/html.svg" alt="">
+                        </div>
+                        <div class="skill">
+                            <img src="./images/skills/javascript.svg" alt="">
+                        </div>
+                        <div class="skill">
+                            <img src="./images/skills/bootstrap.svg" alt="">
+                        </div>
+                        <div class="skill">
+                            <img src="./images/skills/tailwindcss.svg" alt="">
+                        </div>
+                        <div class="skill">
+                            <img src="./images/skills/react.svg" alt="">
+                        </div>
+                        <div class="skill">
+                            <img src="./images/skills/python.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content tab-content--3">
+                    <div class="experience">
+                        <h1 class="sub-heading">Aptech Computer Education</h1>
+                        <h2 class="" style="font-weight: 300;">Information Technology Instructor</h2>
+                        <p style="color: #999;">May 2023 - Feb 2024</p>
+                    </div>
+                    <div class="experience">
+                        <h1 class="sub-heading">Prodigy InfoTech</h1>
+                        <h2 class="" style="font-weight: 300;">Web Development Intern</h2>
+                        <p style="color: #999;">April 2024 - May 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services" id="services">
+        <span class="section-heading">SERVICES</span>
+        <h3 class="section-sub-heading">This is My Expertise, The Services I Provide My Clients</h3>
+        <div class="d-flex">
+            <div class="service">
+                <div class="icon">
+                    <img src="./images/ux-design.png" alt="">
+                </div>
+                <h2>UI & UX Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, obcaecati repellendus tenetur cumque, inventore consectetur error maiores autem vel eius explicabo, reprehenderit assumenda tempore rem.</p>
+            </div>
+            <div class="service">
+                <div class="icon">
+                    <img src="./images/data.png" alt="">
+                </div>
+                <h2>Web Development</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, obcaecati repellendus tenetur cumque, inventore consectetur error maiores autem vel eius explicabo, reprehenderit assumenda tempore rem.</p>
+            </div>
+            <div class="service">
+                <div class="icon">
+                    <img src="./images/mobile-development.png" alt="">
+                </div>
+                <h2>Mobile App</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, obcaecati repellendus tenetur cumque, inventore consectetur error maiores autem vel eius explicabo, reprehenderit assumenda tempore rem.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="work-done">
+        <div class="container d-flex">
+            <div class="question">
+                <h2 class="sub-heading">Have any works you want to done by me?</h2>
+                <p>Far far away, behind the word mountains</p>
+            </div>
+            <div>
+                <a class="btn" href="#">CONTACT ME</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section" id="portfolio">
+        <span class="section-heading">MY PORTFOLIO</span>
+        <h3 class="section-sub-heading">Here are few of my Latest Works. You might want to explore them!</h3>
+        <div class="d-flex">
+            <div class="portfolio">
+                <img src="./images/project-1.png" alt="">
+                <a href="https://github.com/MhideTech/PRODIGY/tree/main/PRODIGY_WD_01" target="_blank"><div class="view"><i class="fa-brands fa-github sub-heading"></i> View on Github</div></a>
+            </div>
+            <div class="portfolio">
+                <img src="./images/project-2.png" alt="">
+                <a href="https://github.com/MhideTech/PRODIGY/tree/main/PRODIGY_WD_02" target="_blank"><div class="view"><i class="fa-brands fa-github sub-heading"></i> View on Github</div></a>
+            </div>
+            <div class="portfolio">
+                <img src="./images/project-3.png" alt="">
+                <a href="https://github.com/MhideTech/PRODIGY/tree/main/PRODIGY_WD_03" target="_blank"><div class="view"><i class="fa-brands fa-github sub-heading"></i> View on Github</div></a>
+            </div>
+            <div class="portfolio">
+                <img src="./images/project-4.png" alt="">
+                <a href="https://github.com/MhideTech/PRODIGY/tree/main/PRODIGY_WD_05" target="_blank"><div class="view"><i class="fa-brands fa-github sub-heading"></i> View on Github</div></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="section-heading">Contact Us</h1>
+        <h3 class="section-sub-heading">Want to connect with me or collaborate on projects together. You can send me a message and I'll reply as soon as I can.</h3>
+        <div class="d-flex" style="align-items: center;">
+            <form class="d-flex" action="https://formspree.io/f/xqkrjkwp" method="post">
+                <div class="d-flex">
+                    <div class="half-form-group">
+                        <label for="Fullname">Full Name</label>
+                        <input type="text" name="Full Name">
+                    </div>
+                    <div class="half-form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" name="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Subject">Subject</label>
+                    <input type="text" name="Subject">
+                </div>
+                <div class="form-group">
+                    <label for="Message">Message</label>
+                    <input type="text" name="Message">
+                </div>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+            <div class="contact-image">
+                <img src="./images/contact.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">ORLAAAH.</div>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/olamide-okefolahan/"><i class="fa-brands fa-linkedin sub-heading"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-square-x-twitter sub-heading"></i></a></li>
+            <li><a href="https://github.com/MhideTech"><i class="fa-brands fa-github sub-heading"></i></a></li>
+        </ul>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

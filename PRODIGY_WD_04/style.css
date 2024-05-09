@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Outfit", sans-serif;    
+    scroll-margin: 110px;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primary-Color: #02325f;
+    --secondary-Color: #fff;
+}
+
+body{
+    background-color: #eee;
+}
+
+.bg-img{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.cont-d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section-heading{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-sub-heading{
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 10px auto 50px;
+    text-align: center;
+    width: 70%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.btn-primary{
+    background-color: var(--primary-Color);
+    color: var(--secondary-Color);
+}
+
+.btn-secondary{
+    background-color: var(--secondary-Color);
+    color: var(--primary-Color);
+}
+
+/* Font-sizes */
+.heading{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.sub-heading{
+    font-size: 1.5rem;
+}
+
+/* Navigation Menu */
+nav{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(1.5px);
+    padding: 30px 0px;
+}
+
+.colored-nav{
+    background: rgba(0,0,0,0.6);
+}
+
+nav .logo-toggle{
+    margin: 0px;
+}
+
+nav .logo{
+    color: var(--secondary-Color);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+nav .logo-toggle .toggle-btn{
+    color: var(--secondary-Color);
+    font-size: 1.5rem;
+    display: none;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li a{
+    margin: 0px 20px;
+    color: var(--secondary-Color);
+    font-size: 1rem;
+}
+
+/* Landing Page Section */
+.hero-wrap{
+    height: 100vh;
+    background-image: url(./images/bg-image.jpg);
+}
+
+.hero-wrap .container{
+    width: 70%;
+    height: fit-content;
+    color: white;
+    margin: 0px auto;
+    text-align: end;
+    padding: 30px 0px;
+}
+
+.hero-wrap .container .hi-there{
+    padding: 8px 15px;
+    background: white;
+    color: var(--primary-Color);
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    margin: 0px 0px 15px;
+}
+
+.hero-wrap .container .hi-there::after{
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: var(--secondary-Color) transparent transparent transparent;
+}
+
+.hero-wrap .container h1{
+    font-weight: 400;
+    color: var(--secondary-Color);
+    font-size: 5rem;
+    margin: 0px 0px 10px;
+}
+
+.hero-wrap .container .sub-heading{
+    display: block;
+    margin: 0px 0px 15px;
+}
+
+.hero-wrap .container p{
+    margin: 10px 0px 0px;
+    line-height: 1.5rem;
+}
+
+/* About Section */
+.about{
+    width: 75%;
+    height: fit-content;
+    margin: 0px auto;
+    padding: 30px 0px;
+}
+
+.about .about-image{
+    width: 48%;
+    height: 80vh;
+    position: relative;
+}
+
+.about .about-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    filter: sepia(10%);
+}
+
+.about .about-text{
+    width: 48%;
+    padding: 20px 0px;
+    /* background-color: blue; */
+}
+
+.about .about-text .tab-container {
+    width: fit-content; 
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab{
+    background-color: var(--secondary-Color);
+    border: none;
+    outline: none;
+    margin: 0px 15px 0px 0px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.tab-btn--active {
+    background-color: var(--primary-Color);
+    color: var(--secondary-Color);
+    transform: translateY(-15%);
+    transition: all 0.5s ease;
+}
+
+.tab-content {
+  display: none;
+  margin: 50px 0px;
+}
+
+.tab-content--active {
+  display: block;
+}
+
+.tab-content--1 ul li{
+    margin: 20px 0px;
+    line-height: 25px;
+    font-size: 1.1rem;
+}
+
+.tab-content--1 ul li i{
+    margin: 0px 20px 0px 0px;
+}
+
+.tab-content--2 p{
+    margin: 20px 0px 0px;
+    line-height: 25px;
+}
+.tab-content--2 .skill{
+    width: 24%;
+    height: fit-content;
+    background-color: var(--secondary-Color);
+    position: relative;
+    padding: 15px;
+    margin: 0px 0px 20px;
+}
+
+.tab-content--2 .skill img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tab-content--3 .experience{
+    margin: 30px 0px 0px;
+}
+.tab-content--3 .experience h2{
+    font-size: 1.2rem;
+    margin: 6px 0px;
+}
+
+
+/* Services */
+.services{
+    width: 75%;
+    margin: 50px auto;
+}
+
+.services span, .services h3, .portfolio-section span, .portfolio-section h3{
+    display: block;
+    text-align: center;
+}
+
+.services .service{
+    width: 32%;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.01);
+    transition: all 0.3s ease;
+}
+
+.services .service .icon{
+    width: 70px;
+    height: 70px;
+    background-color: var(--secondary-Color);
+    border-radius: 5px;
+    position: relative;
+}
+
+.services .service .icon img{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+
+.services .service h2{
+    margin: 15px 0px;
+}
+
+.services .service p{
+    line-height: 25px;
+}
+
+.work-done{
+    padding: 50px 0px;
+    background-color: var(--primary-Color);
+}
+
+.work-done .container{
+    width: 75%;
+    margin: 0px auto;
+    align-items: center;
+    color: var(--secondary-Color);
+}
+
+.work-done .container .question h2{
+    margin: 0px 0px 10px 0px;
+}
+
+.work-done .container a{
+    color: var(--secondary-Color);
+    display: block;
+    border: 1px solid var(--secondary-Color);
+    margin: 0px;
+}
+
+.work-done .container a:hover{
+    color: var(--primary-Color);
+    background-color: var(--secondary-Color);
+    transition: all 0.5s ease;
+}
+
+.portfolio-section{
+    width: 75%;
+    margin: 50px auto;
+}
+
+.portfolio{
+    width: 48%;
+    height: 45vh;
+    position: relative;
+    margin: 0px 0px 20px;
+    overflow: hidden;
+}
+
+.portfolio img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio img:hover{
+    transform: scale(1.02);
+    transition: all 0.5s ease;
+}
+
+.portfolio .view{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--secondary-Color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio .view i{
+    margin: 0px 10px 0px 0px;
+}
+
+.contact{
+    width: 75%;
+    margin: 50px auto;
+}
+
+.contact form{
+    width: 49%;
+    height: fit-content;
+    padding: 30px 0px;
+    flex-direction: column;
+}
+
+.contact .half-form-group{
+    width: 49%;
+}
+
+.contact .form-group{
+    margin-top: 30px;
+}
+
+.contact .form-group label{
+    display: block;
+}
+
+.contact input[type="email"], .contact input[type="text"]{
+    width: 100%;
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid rgb(160, 153, 153);
+    font-size: 1rem;
+}
+
+.contact input[type="submit"] {
+    font-size: .9rem;
+    background-color: var(--primary-Color);
+    color: var(--secondary-Color);
+}
+
+.contact-image{
+    width: 48%;
+    height: 500px;
+}
+
+.contact .contact-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+footer{
+    background-color: var(--secondary-Color);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    box-shadow: 0px 24px 36px -8px rgba(0, 0, 0, 0.9);
+}
+
+footer .logo{
+    font-weight: bold;
+}
+
+footer ul{
+    display: flex;
+}
+
+footer ul li{
+    margin: 0px 10px;
+}
+
+footer ul li a{
+    color: var(--primary-Color);
+}
+
+@media only screen and (max-width: 991px) {
+    .w-50{
+        width: 75%;
+    }
+    .hero-wrap{
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(./images/bg-image.jpg);
+        background-position: left;
+        background-size: cover;
+    }
+
+    .about .about-image{
+        height: 55vh;
+    }
+
+    .about, .services, .portfolio-section{
+        width: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .w-50{
+        width: 100%;
+    }
+
+    .bg-img{
+        background-position: left;
+    }
+
+    .heading{
+        font-size: 1.7rem;
+    }
+
+    .sub-heading{
+        font-size: 1.5rem;
+    }
+
+    nav{
+        display: block;
+        padding: 20px 20px;
+    }
+
+    nav .logo-toggle .toggle-btn{
+        display: block;
+    }
+
+    nav ul{
+        display: none;
+        text-align: center;
+        padding: 1px;
+    }
+
+    nav ul li{
+        margin: 10px 0px 0px;
+    }
+
+    .hero-wrap .container{
+        text-align: center;
+        width: 98%;
+        height: fit-content;
+        padding: 50px 0px;
+    }
+
+    .hero-wrap .container h1{
+        font-size: 3rem;
+    }
+
+    .about, .services, .portfolio-section{
+        width: 100%;
+    }
+
+    .about .about-image, .about .about-text{
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .about .about-image{
+        height: 50vh;
+    }
+
+    .tab-content {
+        margin: 30px 0px;
+    }
+
+    .services .service{
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .work-done .container{
+        width: 85%;
+    }
+
+    .work-done .container a{
+        margin: 20px 0px;
+    }
+
+    .portfolio-section{
+        padding: 0px 15px;
+    }
+
+    .portfolio-section .portfolio{
+        height: 30vh;
+    }
+}
+
