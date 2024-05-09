@@ -1,45 +1,61 @@
 const weatherInfo = document.querySelector("#weather-info");
-const locationForm = document.getElementById("location-form");
-const locationInput = document.getElementById("location-input");
+const locationForm = document.querySelector("#location-form");
+const locationInput = document.querySelector("#location-input");
+const submitBtn = document.querySelector("#submit-btn");
 
-const apiKey = "ad0bc7db00479b56ea95ce14e43f543e";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
-
-async function getWeatherData(location) {
-  const response = await fetch(
-    `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`
-  );
-  const data = await response.json();
-  console.log(data)
-  return data;
-}
-
-function displayWeather(data) {
-  const { name, weather, main } = data;
-  const weatherDescription = weather[0].description;
-  const temperature = main.temp;
-  const feelsLike = main.feels_like;
-
-  weatherInfo.innerHTML = `
-    <h2>${name}</h2>
-    <p>Weather: ${weatherDescription}</p>
-    <p>Temperature: ${temperature}°C</p>
-    <p>Feels Like: ${feelsLike}°C</p>
-  `;
-}
-
-locationForm.addEventListener("submit", async (e) => {
+submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  const location = locationInput.value;
-  if (location) {
+
+  const query = locationInput.value;
+
+  const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${query}`;
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "16b5b415b1msh7cfdea873864269p13a51bjsn5ec40d5e83c6",
+      "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
+    },
+  };
+
+  async function getWeatherData() {
     try {
-      const weatherData = await getWeatherData(location);
-      displayWeather(weatherData);
+      weatherInfo.innerHTML = ``;
+      const response = await fetch(url, options);
+      const data = await response.json();
+      console.log(data);
+
+      !data.error
+        ? (weatherInfo.innerHTML = `
+                <img src=${data.current.condition.icon} alt='' />
+                <h2>${data.current.temp_c}<sup>o</sup>C</h2>
+                <h3>${data.current.condition.text}</h3> 
+                <p>${data.location.name}, ${data.location.country}</p>              
+
+                <div class="more-info">
+                    <div class="info">
+                        <i class="fa-solid fa-cloud"></i>
+                        <div class="text">
+                            <p>${data.current.feelslike_c} <sup>o</sup>C</p>
+                            <span>Feels like</span>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <i class="fa-solid fa-snowflake"></i>
+                        <div class="text">
+                            <p>${data.current.humidity}%</p>
+                            <span>Humidity</span>
+                        </div>
+                    </div>
+                </div>
+            `)
+        : (weatherInfo.innerHTML = `
+                <p style="margin-top: 50px;">${data.error.message}</p>
+            `);
+      console.log(data.error.message);
     } catch (error) {
-      console.error("Error fetching weather data:", error);
-      weatherInfo.innerHTML = `<p>Error fetching weather data. Please try again.</p>`;
+      console.error(error);
     }
-  } else {
-    weatherInfo.innerHTML = `<p>Please enter a location.</p>`;
   }
+
+  getWeatherData();
 });
